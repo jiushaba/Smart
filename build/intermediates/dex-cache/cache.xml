@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\SmartButler\app\libs\Msc.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="994d12017bc2c9ba570180cde5500689d134e6e6">
+        <dex dex="C:\Users\Administrator\Desktop\SmartButler\app\build\intermediates\pre-dexed\debug\Msc_23392ff32f4dc4190e05e91a4eaa02fc6b73c2b0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\SmartButler\app\libs\Sunflower.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="32c8017c4318e3145460ba63ce88c5946d54b891">
+        <dex dex="C:\Users\Administrator\Desktop\SmartButler\app\build\intermediates\pre-dexed\debug\Sunflower_9555d9e9844785a306431eeeabc6f58cf7c6d711.jar" />
+    </item>
+
+</items>
