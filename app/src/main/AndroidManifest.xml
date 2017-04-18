@@ -2,45 +2,40 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zdlog.smartbutler">
 
-
-    <!--获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <!--允许程序改变网络连接状态 -->
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
-    <!--读取联系人权限，上传联系人需要用到此权限 -->
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <!--读取Log-->
+    <!-- 窗口权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 短信权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 读取联系人权限，上传联系人需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 读取Log -->
     <uses-permission android:name="android.permission.READ_LOGS" />
-    <!--允许联网 -->
+    <!-- 允许联网 -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!--获取GSM（2g）、WCDMA（联通3g）等网络状态的信息  -->
+    <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!--获取wifi网络状态的信息 -->
+    <!-- 获取wifi网络状态的信息 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <!--获取sd卡写的权限，用于文件上传和下载-->
+    <!-- 获取sd卡写的权限，用于文件上传和下载 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!--允许读取手机状态 用于创建BmobInstallation-->
+    <!-- 允许读取手机状态 用于创建BmobInstallation -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载-->
-    <!-- 【必须】 信鸽SDK所需权限   -->
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <!-- 【常用】 信鸽SDK所需权限 -->
-    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <!-- 【可选】 信鸽SDK所需权限 -->
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
-    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <!-- 百度地图权限 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.READ_LOGS" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BATTERY_STATS" />
-
-
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
     <application
         android:name=".application.BaseApplication"
@@ -50,7 +45,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.SplashActivity"
+        <activity
+            android:name=".ui.SplashActivity"
             android:theme="@style/NoActivityFullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,33 +54,67 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--设置-->
-        <activity android:name=".ui.SettingActivity"
-            android:label="@string/text_setting"/>
-        <!--闪屏-->
-        <activity android:name=".MainActivity"/>
-        <!--引导页-->
-        <activity android:name=".ui.GuideActivity"
-            android:theme="@style/NoActivityFullscreen"/>
-        <!--登录-->
-        <activity android:name=".ui.LoginActivity"
-            android:label="@string/btn_login"/>
-        <!--注册-->
-        <activity android:name=".ui.RegisteredActivity"
-            android:label="@string/btn_register"/>
-        <!--忘记/重置密码-->
-        <activity android:name=".ui.ForgetPasswordActivity"
-            android:label="忘记密码"/>
-        <!--快递查询-->
-        <activity android:name=".ui.CourierActivity"
-            android:label="快递查询"/>
-        <!--归属地查询-->
-        <activity android:name=".ui.PhoneActivity"
-            android:label="归属地查询"/>
-        <!--新闻详情-->
-        <activity android:name=".ui.WebViewActivity"/>
+        <!-- 设置 -->
+        <activity
+            android:name=".ui.SettingActivity"
+            android:label="@string/text_setting" />
+        <!-- 闪屏 -->
+        <activity android:name=".MainActivity"
+            android:theme="@style/Title_centent"/>
+        <!-- 引导页 -->
+        <activity
+            android:name=".ui.GuideTwoActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- 登录 -->
+        <activity
+            android:name=".ui.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- 注册 -->
+        <activity
+            android:name=".ui.RegisteredActivity"
+            android:label="@string/btn_register" />
+        <!-- 忘记/重置密码 -->
+        <activity
+            android:name=".ui.ForgetPasswordActivity"
+            android:label="忘记密码" />
+        <!-- 快递查询 -->
+        <activity
+            android:name=".ui.CourierActivity"
+            android:label="快递查询" />
+        <!-- 归属地查询 -->
+        <activity
+            android:name=".ui.PhoneActivity"
+            android:label="归属地查询" />
+        <!-- 新闻详情 -->
+        <activity android:name=".ui.WebViewActivity" />
+        <!-- 短信监听服务 -->
+        <service android:name=".service.SmsService" />
+        <!-- 下载 -->
+        <activity
+            android:name=".ui.UpdataActivity"
+            android:label="下载更新" />
+        <!-- 二维码 -->
+        <activity
+            android:name=".ui.QrCodeActivity"
+            android:label="我的二维码" />
+        <!-- 我的位置 -->
+        <activity
+            android:name=".ui.LocationActivity"
+            android:label="我的位置" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="QTIZAahCxS93gGcg4BpcOUdbvwGo97uw" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- 关于软件 -->
+        <activity
+            android:name=".ui.AboutActivity"
+            android:label="关于软件" />
 
     </application>
-
 
 </manifest>

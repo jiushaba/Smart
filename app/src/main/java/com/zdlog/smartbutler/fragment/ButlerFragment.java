@@ -22,6 +22,7 @@ import com.zdlog.smartbutler.R;
 import com.zdlog.smartbutler.adapter.ChatListAdapter;
 import com.zdlog.smartbutler.entity.ChatListData;
 import com.zdlog.smartbutler.utils.L;
+import com.zdlog.smartbutler.utils.ShareUtils;
 import com.zdlog.smartbutler.utils.StaticClass;
 
 import org.json.JSONException;
@@ -63,7 +64,7 @@ public class ButlerFragment extends Fragment implements View.OnClickListener {
         mTts = SpeechSynthesizer.createSynthesizer(getActivity(), null);
         //2.合成参数设置，详见《科大讯飞MSC API手册(Android)》SpeechSynthesizer 类
         mTts.setParameter(SpeechConstant.VOICE_NAME, "xiaoyan");//设置发音人
-        mTts.setParameter(SpeechConstant.SPEED, "50");//设置语速
+        mTts.setParameter(SpeechConstant.SPEED, "80");//设置语速
         mTts.setParameter(SpeechConstant.VOLUME, "80");//设置音量，范围0~100
         mTts.setParameter(SpeechConstant.ENGINE_TYPE, SpeechConstant.TYPE_CLOUD); //设置云端
         //设置合成音频保存位置（可自定义保存位置），保存在“./sdcard/iflytek.pcm”
@@ -139,9 +140,10 @@ public class ButlerFragment extends Fragment implements View.OnClickListener {
 
     //添加左边文本
     private void addLeftItem(String text) {
-
-        startSpeak(text);
-
+        boolean isSpeak = ShareUtils.getBoolen(getActivity(), "isSpeak", false);
+        if (isSpeak){
+            startSpeak(text);
+        }
         ChatListData data = new ChatListData();
         data.setType(ChatListAdapter.VALUE_LEFT);
         data.setText(text);

@@ -25,14 +25,18 @@ public class StaticClass {
     public static final String CHAT_LIST_KEY = "7a48539921338ef90866922b21e25f6d";
     //微信精选key
     public static final String WECHAT_KEY = "78f723dccf85aea324a3cf0daac97f35";
-
-
-
-
     //妹子接口
     public static final String GIRL_URL = "http://gank.io/api/search/query/listview/category/福利/count/50/page/1";
     //语音KEY
     public static final String VOICE_KEY="58f1adca";
+    //短信Action
+    public static final String SMS_ACTION = "android.provider.Telephony.SMS_RECEIVED";
+    //版本更新
+    public static final String CHECK_UPDATE_URL="http://www.zdlog.com";
+
+
+
+
 
 
     //腾讯信鸽ACCESS ID

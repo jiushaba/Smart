@@ -39,7 +39,7 @@ public class SplashActivity extends AppCompatActivity{
                     //判断程序是否第一次运行
 
                     if (isFirst()){
-                        startActivity(new Intent(SplashActivity.this,GuideActivity.class));
+                        startActivity(new Intent(SplashActivity.this,GuideTwoActivity.class));
                     }else {
                         startActivity(new Intent(SplashActivity.this,LoginActivity.class));
                     }

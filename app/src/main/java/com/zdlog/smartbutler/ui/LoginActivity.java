@@ -1,14 +1,13 @@
 package com.zdlog.smartbutler.ui;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,13 +29,12 @@ import cn.bmob.v3.listener.SaveListener;
  * 创建时间：2017/4/10 0010下午 5:25
  * 描述： 登录+
  */
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends Activity implements View.OnClickListener {
     //注册
-    private Button btn_registered;
+    private TextView btn_registered;
     private EditText et_name;
     private EditText et_password;
     private Button btnLogin;
-    private CheckBox keep_password;
     private TextView tv_forget;
     private CustomDialog dialog;
     @Override
@@ -44,26 +42,24 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
         initView();
     }
 
     private void initView() {
 
-        btn_registered= (Button) findViewById(R.id.btn_registered);
+        btn_registered= (TextView) findViewById(R.id.btn_registered);
         btn_registered.setOnClickListener(this);
         et_name= (EditText) findViewById(R.id.et_name);
         et_password= (EditText) findViewById(R.id.et_password);
         btnLogin= (Button) findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(this);
-        keep_password= (CheckBox) findViewById(R.id.keep_password);
 
         //设置选中的状态
         boolean isCheck = ShareUtils.getBoolen(this, "keeppass", false);
-        keep_password.setChecked(isCheck);
         if (isCheck){
             //设置用户名和密码
             et_name.setText(ShareUtils.getString(this,"name",""));
+            et_name.setSelection(ShareUtils.getString(this,"name","").length());
             et_password.setText(ShareUtils.getString(this,"password",""));
         }else {
             et_name.setText("");
@@ -130,9 +126,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onDestroy() {
         super.onDestroy();
         //保存状态
-        ShareUtils.putBoolen(this,"keeppass",keep_password.isChecked());
+        ShareUtils.putBoolen(this,"keeppass",true);
         //是否记住密码
-        if (keep_password.isChecked()){
+        if (true){
             //记住用户名和密码
             ShareUtils.putString(this,"name",et_name.getText().toString().trim());
             ShareUtils.putString(this,"password",et_password.getText().toString().trim());

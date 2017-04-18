@@ -3,21 +3,48 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\Desktop\SmartButler\app\libs\Msc.jar"
+        jar="C:\Users\Administrator\Desktop\SmartButle\app\libs\Msc.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="994d12017bc2c9ba570180cde5500689d134e6e6">
-        <dex dex="C:\Users\Administrator\Desktop\SmartButler\app\build\intermediates\pre-dexed\debug\Msc_23392ff32f4dc4190e05e91a4eaa02fc6b73c2b0.jar" />
+        <dex dex="C:\Users\Administrator\Desktop\SmartButle\app\build\intermediates\pre-dexed\debug\Msc_3db775d82f5cb39f24a16f786978b63fff6b8c2d.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Administrator\Desktop\SmartButler\app\libs\Sunflower.jar"
+        jar="C:\Users\Administrator\Desktop\SmartButle\app\libs\BaiduLBS_Android.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6d229160de3aefcb1716fa6c68e01c1680ed6f77">
+        <dex dex="C:\Users\Administrator\Desktop\SmartButle\app\build\intermediates\pre-dexed\debug\BaiduLBS_Android_a47cd15a55700358de7a7040c7648e3a68738d35.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\SmartButle\app\libs\butterknife-7.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="C:\Users\Administrator\Desktop\SmartButle\app\build\intermediates\pre-dexed\debug\butterknife-7.0.1_ecf5a08ef96209ea1a1b1e0df9aa81a3558a852c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\SmartButle\libzxing\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="eed8d096e1f2aad6006b256b5088a0953d976328">
+        <dex dex="C:\Users\Administrator\Desktop\SmartButle\app\build\intermediates\pre-dexed\debug\classes_7cdf0a6392a12984b191b12622a948906d599d97.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\SmartButle\app\libs\Sunflower.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="32c8017c4318e3145460ba63ce88c5946d54b891">
-        <dex dex="C:\Users\Administrator\Desktop\SmartButler\app\build\intermediates\pre-dexed\debug\Sunflower_9555d9e9844785a306431eeeabc6f58cf7c6d711.jar" />
+        <dex dex="C:\Users\Administrator\Desktop\SmartButle\app\build\intermediates\pre-dexed\debug\Sunflower_56e67eed34a735d0b70de9e18810474367bf2487.jar" />
     </item>
 
 </items>

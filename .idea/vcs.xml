@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="C:\Users\Administrator\Desktop\SmartButle\Smart" vcs="Git" />
     <mapping directory="C:\Users\Administrator\Desktop\SmartButler\SmartButler1" vcs="Git" />
     <mapping directory="C:\Users\Administrator\Desktop\SmartButler\smartbutle" vcs="Git" />
     <mapping directory="C:\Users\Administrator\Desktop\SmartButler\smartbutler" vcs="Git" />

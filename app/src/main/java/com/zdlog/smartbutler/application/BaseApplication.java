@@ -2,6 +2,7 @@ package com.zdlog.smartbutler.application;
 
 import android.app.Application;
 
+import com.baidu.mapapi.SDKInitializer;
 import com.iflytek.cloud.SpeechConstant;
 import com.iflytek.cloud.SpeechUtility;
 import com.tencent.bugly.crashreport.CrashReport;
@@ -22,9 +23,11 @@ public class BaseApplication extends Application{
         CrashReport.initCrashReport(getApplicationContext(), StaticClass.BUGLY_APP_ID, true);
         //初始化Bmob
         Bmob.initialize(this,StaticClass.BMOB_APP_ID);
-//        // 将“12345678”替换成您申请的APPID，申请地址：http://open.voicecloud.cn
-//        SpeechUtility.createUtility(getApplicationContext(), SpeechConstant.APPID + "="+StaticClass.VOICE_KEY);
+//     // 将“12345678”替换成您申请的APPID，申请地址：http://open.voicecloud.cn
+       SpeechUtility.createUtility(getApplicationContext(), SpeechConstant.APPID + "="+StaticClass.VOICE_KEY);
         // 将“12345678”替换成您申请的APPID，申请地址：http://open.voicecloud.cn
-        SpeechUtility.createUtility(getApplicationContext(), SpeechConstant.APPID +"=58f1adca");
+//        SpeechUtility.createUtility(getApplicationContext(), SpeechConstant.APPID +"=58f1adca");
+
+        SDKInitializer.initialize(getApplicationContext());
     }
 }

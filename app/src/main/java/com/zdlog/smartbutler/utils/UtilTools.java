@@ -1,6 +1,8 @@
 package com.zdlog.smartbutler.utils;
 
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
@@ -42,5 +44,15 @@ public class UtilTools {
             e.printStackTrace();
         }
         return  bm;
+    }
+    //获取版本号
+    public static String getVersion(Context mContent){
+        PackageManager pm = mContent.getPackageManager();
+        try {
+            PackageInfo info = pm.getPackageInfo(mContent.getPackageName(), 0);
+            return info.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            return "未知";
+        }
     }
 }
