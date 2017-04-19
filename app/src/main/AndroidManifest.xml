@@ -40,7 +40,7 @@
     <application
         android:name=".application.BaseApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_longh"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -50,7 +50,6 @@
             android:theme="@style/NoActivityFullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -60,7 +59,7 @@
             android:label="@string/text_setting" />
         <!-- 闪屏 -->
         <activity android:name=".MainActivity"
-            android:theme="@style/Title_centent"/>
+            android:theme="@style/AppTheme_copy"/>
         <!-- 引导页 -->
         <activity
             android:name=".ui.GuideTwoActivity"

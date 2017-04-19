@@ -66,7 +66,7 @@ public class CourierActivity extends BaseActivity implements View.OnClickListene
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 name=StaticClass.courier_naem[position];
-                Toast.makeText(CourierActivity.this,StaticClass.courier_naem[position] , Toast.LENGTH_SHORT).show();
+//                Toast.makeText(CourierActivity.this,StaticClass.courier_naem[position] , Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -101,7 +101,7 @@ public class CourierActivity extends BaseActivity implements View.OnClickListene
                     RxVolley.get(url, new HttpCallback() {
                         @Override
                         public void onSuccess(String t) {
-                            Toast.makeText(CourierActivity.this, t, Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(CourierActivity.this, t, Toast.LENGTH_SHORT).show();
                             L.i("json"+t);
                             //4、解析Json
                             parsingJson(t);
@@ -121,20 +121,23 @@ public class CourierActivity extends BaseActivity implements View.OnClickListene
         try {
             JSONObject jsonObject=new JSONObject(t);
             JSONObject jsonResult = jsonObject.getJSONObject("result");
-            JSONArray jsonArray = jsonResult.getJSONArray("list");
-            for(int i=0;i<jsonArray.length();i++){
-                JSONObject json= (JSONObject) jsonArray.get(i);
-                CourierData data=new CourierData();
-                data.setRemark(json.getString("remark"));
-                data.setZone(json.getString("zone"));
-                data.setDatatime(json.getString("datetime"));
-                mList.add(data);
-                L.i(mList.toString());
-            }
-            //倒序显示
-            Collections.reverse(mList);
-            CourierAdapter adapter=new CourierAdapter(this,mList);
-            mListView.setAdapter(adapter);
+            String resultcode = jsonObject.getString("resultcode");
+                JSONArray jsonArray = jsonResult.getJSONArray("list");
+                for(int i=0;i<jsonArray.length();i++){
+                    JSONObject json= (JSONObject) jsonArray.get(i);
+                    CourierData data=new CourierData();
+                    data.setRemark(json.getString("remark"));
+                    data.setZone(json.getString("zone"));
+                    data.setDatatime(json.getString("datetime"));
+                    mList.add(data);
+                    L.i(mList.toString());
+                }
+                //倒序显示
+                Collections.reverse(mList);
+                CourierAdapter adapter=new CourierAdapter(this,mList);
+                mListView.setAdapter(adapter);
+
+
         } catch (JSONException e) {
             e.printStackTrace();
         }

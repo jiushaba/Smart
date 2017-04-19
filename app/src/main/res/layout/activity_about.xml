@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
-        android:background="@color/colorPrimary"
+        android:background="#969f9e"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center"
@@ -14,7 +14,7 @@
             android:id="@+id/profile_image"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:src="@mipmap/ic_launcher"
+            android:src="@mipmap/ic_longh"
             app:civ_border_width="2dp"
             app:civ_border_color="@android:color/white"/>
     </LinearLayout>

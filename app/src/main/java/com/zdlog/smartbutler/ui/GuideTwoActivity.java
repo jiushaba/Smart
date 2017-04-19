@@ -31,7 +31,7 @@ public class GuideTwoActivity extends Activity implements View.OnClickListener {
     @Bind(R.id.into)
     Button into;
     //---------------------------------------------------------------
-    private int[] imagesid = {R.drawable.demo, R.drawable.demo, R.drawable.demo, R.drawable.demo};
+    private int[] imagesid = {R.drawable.come_on_one, R.drawable.come_on_two, R.drawable.come_on_there, R.drawable.come_on_four};
     //---------------------------------------------------------------
     private ArrayList<ImageView> views = new ArrayList<ImageView>();
     private GuideAdapter adapter;

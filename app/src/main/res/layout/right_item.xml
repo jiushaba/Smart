@@ -11,14 +11,14 @@
         android:layout_marginRight="10dp"
         android:background="@drawable/chat_bg_user"
         android:gravity="center_vertical"
-        android:padding="20sp"
+        android:padding="15sp"
         android:text="右边"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
+        android:textSize="16sp"
         />
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_marginRight="10dp"
         android:src="@drawable/user"
         />

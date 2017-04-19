@@ -371,7 +371,6 @@ public class UserFragment extends Fragment implements View.OnClickListener {
             public void done(BmobException e) {
                 if(e==null){
                     //bmobFile.getFileUrl()--返回的上传文件的完整地址
-                    Toast.makeText(getActivity(),"更改成功:" + bmobFile.getFileUrl(),Toast.LENGTH_SHORT).show();
                     MyUser user=new MyUser();
                     BmobUser bmobUser=BmobUser.getCurrentUser();
                     user.setPhotoPath(bmobFile.getFileUrl().toString());
@@ -382,8 +381,7 @@ public class UserFragment extends Fragment implements View.OnClickListener {
                                 //修改成功
                                 setEnabled(false);
                                 btn_updata_ok.setVisibility(View.GONE);
-                                Toast.makeText(getActivity(),"修改成功",Toast.LENGTH_SHORT).show();
-
+                                Toast.makeText(getActivity(),"头像修改成功",Toast.LENGTH_SHORT).show();
                             }else {
                                 Toast.makeText(getActivity(),"修改失败",Toast.LENGTH_SHORT).show();
 

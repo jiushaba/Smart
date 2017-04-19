@@ -109,4 +109,19 @@
             android:textSize="18sp"
             />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom">
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="www.zdlog.com"
+            android:layout_marginBottom="5dp"
+            android:textColor="#cf1dbaf1"
+            />
+    </LinearLayout>
+
 </LinearLayout>
